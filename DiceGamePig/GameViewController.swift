@@ -40,6 +40,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        overrideUserInterfaceStyle = .light
         backgroundImageView.frame = view.bounds
 
         L_ProgressBar.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
