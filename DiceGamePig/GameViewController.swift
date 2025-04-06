@@ -102,8 +102,12 @@ class GameViewController: UIViewController {
     
     @IBAction func roll(_ sender: UIButton) {
         
-        diceCurr = Int.random(in: 1...13) % 7
-        //diceCurr = Int.random(in: 2...6)
+        self.L_TalkLabel.text = "．．．"
+        self.R_TalkLabel.text = "．．．"
+        
+        //diceCurr = Int.random(in: 1...6)
+        diceCurr = [1, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6].randomElement()!
+        
         diceImageView.addSymbolEffect(.rotate, options: .speed(2.0), completion: {_ in
             
             self.diceImageView.image = UIImage(systemName: "die.face.\(self.diceCurr)")
