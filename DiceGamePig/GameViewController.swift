@@ -64,7 +64,7 @@ class GameViewController: UIViewController {
         R_ProgressLabel.text = "\(gradeR)"
         
         L_TalkLabel.text = "來PK啊"
-        R_TalkLabel.text = "好啊～誰怕誰～"
+        R_TalkLabel.text = "好啊！誰怕誰！"
         
         diceCurr = 3
         sumCurr = 4
@@ -102,8 +102,8 @@ class GameViewController: UIViewController {
     
     @IBAction func roll(_ sender: UIButton) {
         
-        //diceCurr = Int.random(in: 1...13) % 7
-        diceCurr = Int.random(in: 2...6)
+        diceCurr = Int.random(in: 1...13) % 7
+        //diceCurr = Int.random(in: 2...6)
         diceImageView.addSymbolEffect(.rotate, options: .speed(2.0), completion: {_ in
             
             self.diceImageView.image = UIImage(systemName: "die.face.\(self.diceCurr)")
@@ -158,7 +158,7 @@ class GameViewController: UIViewController {
             L_ProgressLabel.text = "\(gradeL)"
             
             if gradeL >= 100 {
-                L_TalkLabel.text = "哇哈哈～我贏了～"
+                L_TalkLabel.text = "哇哈哈！我贏了！"
                 R_TalkLabel.text = "算你厲害！"
             } else {
                 L_TalkLabel.text = "．．．"
@@ -176,7 +176,7 @@ class GameViewController: UIViewController {
             R_ProgressLabel.text = "\(gradeR)"
             
             if gradeR >= 100 {
-                R_TalkLabel.text = "哇哈哈～我贏了～"
+                R_TalkLabel.text = "哇哈哈！我贏了！"
                 L_TalkLabel.text = "算你厲害！"
             } else {
                 R_TalkLabel.text = "．．．"
